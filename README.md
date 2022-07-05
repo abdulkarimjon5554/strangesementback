@@ -1,0 +1,2 @@
+# strangesementback
+back qismi
