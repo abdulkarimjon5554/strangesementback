@@ -1,0 +1,13 @@
+extends ../layout
+block content
+    h1 Registratsiya
+        form(action="/register" method="POST")
+            label(for="name") Name
+            input(type="text" name="name" placeholder="Ismingiz")
+            label(for="email") Email
+            input(type="email" name="email" placeholder="Email")
+            label(for="password") Password
+            input(type="password" name="password" placeholder="Parol")
+            label(for="confirmPassword") ConfirmPassword
+            input(type="confirmPassword" name="confirmPassword" placeholder="ConfirmPassword")
+            input(type="submit")

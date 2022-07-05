@@ -1,0 +1,19 @@
+a(href="/") Asosiy sayt 
+a(href="/admin")  
+    h1= title
+ul.d-flex.flex-column
+    li 
+        a(href="/admin/products" class=(active === "products" ? "active p-2 d-inline-block" : undefined))  Mahsulotlar
+    li 
+        a(href="/admin/categories" class=(active === "categories" ? "active p-2 d-inline-block" : undefined)) Bo'limlar 
+    li 
+        a(href="/admin/news" class=(active === "news" ? "active p-2 d-inline-block" : undefined)) Yangiliklar 
+    li 
+        a(href="/admin/partners" class=(active === "partners" ? "active p-2 d-inline-block" : undefined)) Hamkorlar
+    li 
+        a(href="?lang=uz") Uz
+    li 
+        a(href="?lang=ru") Ru
+    li 
+        a(href="?lang=en") En
+    

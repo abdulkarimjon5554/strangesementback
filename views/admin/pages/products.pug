@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+  p Mahsulotlar
+  a(href="/products/add").btn.btn-primary Yangi kiritish
+  if(products.length > 0) 
+    table   
+      tr 
+        td #
+        td Rasmi
+        td Nomi
+        td Text
+        td Price
+        td Edit
+        td Delete
+      each product, i in products  
+        tr 
+          td #{i + 1}
+          td 
+            img(src=`/images/products/${product.image[0].filename}`, alt="" width="50px")
+          td #{product.name[`${lang}`]}
+          td #{product.fulltext[`${lang}`]}
+          td #{product.price}
+          td 
+            a.m-2(href=`/products/edit/${product.id}`)  Edit
+          td 
+            a.m-2(href=`/products/delete/${product.id}`)  Delete  
+  else
+      p Mahsulotlar yo'q     
+
